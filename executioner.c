@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 char ** parse_args(char * line) {
-  char start[256][256];
+  char ** start = calloc(1024, 1);
   strcpy(start[0], line);
   printf("%s\n", start[0]);
   int counter = 1;
