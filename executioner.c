@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 char ** parse_args(char * line) {
-  char ** start = calloc(1024, 1);
+  char ** start = calloc(sizeof(start), 256);
   strcpy(start[0], line);
   printf("%s\n", start[0]);
   int counter = 1;
