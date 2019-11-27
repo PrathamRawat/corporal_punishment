@@ -17,9 +17,9 @@ char ** parse_args(char * line) {
 }
 
 int main() {
-  // char run[10] = "ls -l";
+  char run[10] = "ls -l";
   // *run = "ls -l";
-  char ** arguments = parse_args("ls -l");
+  char ** arguments = parse_args(run);
   execvp(arguments[0], arguments);
   return 0;
 }
