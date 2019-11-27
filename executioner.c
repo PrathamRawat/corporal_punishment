@@ -5,11 +5,13 @@
 
 char ** parse_args(char * line) {
   char ** start = calloc(sizeof(start), 256);
-  strcpy(start[0], line);
+  // strcpy(start[0], line);
+  start[0] = line;
   printf("%s\n", start[0]);
   int counter = 1;
   while(strsep(&line, " ") != NULL) {
-    strcpy(start[counter], line);
+    start[counter] = line;
+    counter++;
   }
   return start;
 }
